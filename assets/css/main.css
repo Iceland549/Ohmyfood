@@ -1,0 +1,9 @@
+@media (max-width: 375px) {
+    footer {
+      padding: 0;
+      background-color: black;
+    }
+    footer h2 {
+      font-family: shrikhand, sans-serif;
+    }
+  }/*# sourceMappingURL=main.css.map */
