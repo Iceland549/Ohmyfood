@@ -8,9 +8,7 @@
 
 // Styles de base pour mobiles ..................................//
 
-* {
-  font-family: 'Roboto', sans-serif;
-}
+
 
 :root {
     --primary: #9356DC;
@@ -18,6 +16,7 @@
     --grey: #353535;
     --grey-2: #EAEAEA;
     --white: #fff;
+    --black: #000000;
     --btn-gradient: linear-gradient(193 deg, #9356DC -11,44%, #FF79 123.93%)
 }
 
@@ -29,11 +28,7 @@
   color: var(--primary);
 }
 
-body {
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-}
+
 
 // Style for Header  ............................................//
 .header {
@@ -130,57 +125,61 @@ body {
           height: 231px;
           border-radius: 20px 20px 0 0;
         }
+      }
 
-        &__text {
-          color: black;
+      &__title, &__subtitle {
+        color: var(--black);
+        text-decoration: none;
+        margin: 0px;
+        gap: 7px;
 
-          h3, p {
-            text-decoration: none;
-          }
-        }
+      }
+
+      &__buttom { 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+      }
+
+      &__text { 
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__icone { 
+        display: flex;
+        flex-direction: column;
       }
     }
   }
 }
 
+.card__buttom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__icone {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
  
-  
-
-
 
   // Style for Footer .............................................//
 
-.footer {
-  display: flex;
-  background-color: var(--grey);
-  padding: 22px 25px;
 
-  &__logo {
-    img {
-      filter: invert(1);
-      height: 24px;
-    }
-
-    i {
-      padding-right: 11px;
-      color: var(--white);
-    }
-  }
-
-  &__link {
-    color: var(--white);
-    text-decoration: none;    
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    gap: 7px;
-    padding: 0px;
-
-  }
-}
   
 
   // Media query for desktop ........................................//
