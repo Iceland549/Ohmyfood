@@ -21,96 +21,102 @@
     <title>Votre site de restaurants</title>
 </head>
 <body>
-    <header>
-        <div class="header-logo">
-            <img src="assets/images/logo/ohmyfood.png" alt="Logo du site">
-            <div class="header-title">
-                <i class="fa-solid fa-location-dot header_icone">Paris, Belleville</i>
+    <header class="header"><!--...............Section HEADER.............-->
+        <div class="header__container">
+            <div class="header__logo">
+                <img src="assets/images/logo/ohmyfood.png" alt="Logo du site">
+            </div>
+            <div class="header__location">
+                <i class="fa-solid fa-location-dot header__icon"></i>
+                <span class="header__text">Paris, Belleville</span>
             </div>
         </div>
     </header>
+    
     <main>
-        <div class="filter-section">
-            <h1 class="filter-title">Réservez le menu qui vous convient</h1>
-            <p class="filter-subtitle">Découvrez des restaurants d'exeption, séléctionnés par nos soins</p>
+        <div class="filter-section"><!--...............Section FILTERS.............-->
+            <h1 class="filter-title__title">Réservez le menu qui vous convient</h1>
+            <p class="filter-subtitle__subtitle">Découvrez des restaurants d'exeption, séléctionnés par nos soins</p>
         
-            <form class="search-form">
-                <button class="btn">Explorez nos restaurants</button>
+            <form class="filter-section-form">
+                <a href="#restaurants-section" class="filter-section__btn-link">
+                    <button class="filter-section__button">Explorez nos restaurants</button>
+                </a>
             </form>
         </div>
-        <nav class="nav-section">
-            <h2>Fonctionnement</h2>
-            <ul>
-                <li>
-                    <i class="fas fa-mobile-alt"></i>
-                    <a href="#">1. Choisissez un restaurant</a>
+        <nav class="nav-section"><!--...............Section NAVIGATION.............-->
+            <h2 class="nav-section__title">Fonctionnement</h2>
+            <ul class="nav-section__list">                
+                <li class="nav-section__item">
+                    <i class="nav-section__icon fas fa-mobile-alt"></i>
+                    <a class="nav-section__link" href="#">1. Choisissez un restaurant</a>
                 </li>
-                <li>
-                    <i class="fa-sharp fa-solid fa-list-ul"></i>
-                    <a href="#">2. Composez votre menu</a>
+                <li class="nav-section__item">
+                    <i class="nav-section__icon fa-sharp fa-solid fa-list-ul"></i>
+                    <a class="nav-section__link" href="#">2. Composez votre menu</a>
                 </li>
-                <li>
-                    <i class="fa-solid fa-store"></i>
-                    <a href="#">3. Dégustez au restaurant</a>
+                <li class="nav-section__item">
+                    <i class="nav-section__icon fa-solid fa-store"></i>
+                    <a class="nav-section__link" href="#">3. Dégustez au restaurant</a>
                 </li>
             </ul>
         </nav>
-        <div class="restaurants-section">
-            <div class="restaurants-title">
+        <div class="cards-section" id="cards-section"><!--.........Section CARDS............-->
+            <div class="card-section-title">
             <h2>Restaurants</h2>
             </div>
-            <div class="restaurants-cards">
+            <div class="cards-section__cards">
                 <a href="#">
                     <article class="card">
-                        <div class="card-content">
-                            <div class="badge">Nouveau</div>
-                            <img
+                        <div class="card__content">
+                            <div class="card__badge">Nouveau</div>
+                            <img class="card__image"
                                 src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" 
                                 alt="Restaurant 1"
                             />
-                            <div class="card-text">
-                                <h3 class="card-title">La palette du goût</h3>
-                                <p class="card-subtitle">Ménilmontant</p>
+                            <div class="card__text">
+                                <h3 class="card__title">La palette du goût</h3>
+                                <p class="card__subtitle">Ménilmontant</p>
                             </div>
-                            <div class="card-icone">
+                            <div class="card__icone">
                                 <i class="fa-regular fa-heart"></i>                            </div>
                         </div>
-                        <div class="card-content">
-                            <div class="badge">Nouveau</div>
-                            <img
+                        <div class="card__content">
+                            <div class="card__badge">Nouveau</div>
+                            <img class="card__image"
                                 src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" 
                                 alt="Restaurant 2"
                             />
-                            <div class="card-text">
-                                <h3 class="card-title">La note enchantée</h3>
-                                <p class="card-subtitle">Charonne</p>
+                            <div class="card__text">
+                                <h3 class="card__title">La note enchantée</h3>
+                                <p class="card__subtitle">Charonne</p>
                             </div>
-                            <div class="card-icone">
+                            <div class="card__icone">
                                 <i class="fas fa-heart"></i>
                             </div>
                         </div>
-                        <div class="card-content">
-                            <img
+                        <div class="card__content">
+                            <img class="card__image"
                                 src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" 
                                 alt="Restaurant 3"
                             />
-                            <div class="card-text">
-                                <h3 class="card-title">À la française</h3>
-                                <p class="card-subtitle">Cité Rouge</p>
+                            <div class="card__text">
+                                <h3 class="card__title">À la française</h3>
+                                <p class="card__subtitle">Cité Rouge</p>
                             </div>
-                            <div class="card-icone">
+                            <div class="card__icone">
                                 <i class="fa-regular fa-heart"></i>                            </div>
                         </div>
-                        <div class="card-content">
-                            <img
+                        <div class="card__content">
+                            <img class="card__image"
                                 src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" 
                                 alt="Restaurant 4"
                             />
-                            <div class="card-text">
-                                <h3 class="card-title">Le délice des sens</h3>
-                                <p class="card-subtitle">Folie-Méricourt</p>
+                            <div class="card__text">
+                                <h3 class="card__title">Le délice des sens</h3>
+                                <p class="card__subtitle">Folie-Méricourt</p>
                             </div>
-                            <div class="card-icone">
+                            <div class="card__icone">
                                 <i class="fa-regular fa-heart"></i>                            </div>
                         </div>
                     </article>
@@ -118,23 +124,23 @@
             </div>
         </div>
     </main>
-    <footer>
-        <div class="footer-logo">
-            <img src="assets/images/logo/ohmyfood@2x.svg" alt="Logo du site">
-            <ul>
-                <li>
-                    <i class="fas fa-utensils"></i>
-                    <a href="#">Proposer un restaurant</a>
+    <footer class="footer"><!--...............Section FOOTER.............-->
+        <div class="footer__logo">
+            <img class="footer__logo-image" src="assets/images/logo/ohmyfood@2x.svg" alt="Logo du site">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <i class="footer__icon fas fa-utensils"></i>
+                    <a class="footer__link" href="#">Proposer un restaurant</a>
                 </li>
-                <li>
-                    <i class="fa-solid fa-handshake-angle"></i>
-                    <a href="#">Devenir partenaire</a>
+                <li class="footer__item">
+                    <i class="footer__icon fa-solid fa-handshake-angle"></i>
+                    <a class="footer__link" href="#">Devenir partenaire</a>
                 </li>
-                <li>
-                    <a href="#">Mentions légales</a>
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Mentions légales</a>
                 </li>
-                <li>
-                    <a href="#">Contact</a>
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Contact</a>
                 </li>
             </ul>
         </div>

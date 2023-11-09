@@ -8,6 +8,7 @@
   --grey: #353535;
   --grey-2: #EAEAEA;
   --white: #fff;
+  --btn-gradient: linear-gradient(193 deg, #9356DC -11,44%, #FF79 123.93%) ;
 }
 
 .logo {
@@ -27,86 +28,99 @@ body {
 .header {
   display: flex;
 }
-.header-logo {
-  justify-content: center;
-  background-color: var(--white);
+.header__container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
 }
-.header-logo img {
+.header__logo {
+  background-color: var(--white);
+  margin: 10px;
+}
+.header__logo img {
   width: 162px;
   height: 30px;
 }
-.header-title {
+.header__location {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   font-family: "Roboto", sans-serif;
   background-color: var(--grey-2);
   gap: 10px;
+  padding: 10px 123px 10px 123px;
 }
-.header-title__icone {
+.header__location__icon {
   width: 12px;
   height: 16px;
 }
 
-.main-content {
-  padding: 20px;
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.filter-section__title, .filter-section__subtitle, .filter-section__form {
+  text-align: center;
+}
+.filter-section__button {
+  border-radius: 20px;
+  background-image: var(--btn-gradient);
+}
+.filter-section__button__link {
+  text-decoration: none;
 }
 
-.restaurants-section {
+.cards-section {
   background-color: var(--bg-color);
   padding: 0 15px 0 15px;
 }
-.restaurants-section img {
+.cards-section__title h2 {
+  margin: 0px;
+}
+.cards-section__cards .card {
+  gap: 18px;
+}
+.cards-section__cards .card__content {
+  background-color: var(--white);
+  border-radius: 20px;
+}
+.cards-section__cards .card__content img {
   width: 100%;
   height: 231px;
   border-radius: 20px 20px 0 0;
 }
-.restaurants-section img h2 {
-  padding: 54px 80px 40px 20px;
-  margin: 0px;
-}
-.restaurants-section img h2 .card {
-  padding: 0px 18px 66px 18px;
-  gap: 18px;
-}
-
-.card-content {
-  background-color: var(--white);
-  border-radius: 20px 20px 20px 20px;
-}
-
-.card-text {
+.cards-section__cards .card__content__text {
   color: black;
 }
-
-.card-text h3, p {
+.cards-section__cards .card__content__text h3, .cards-section__cards .card__content__text p {
   text-decoration: none;
 }
 
-footer {
+.footer {
   display: flex;
   background-color: var(--grey);
   padding: 22px 25px;
 }
-footer ul {
+.footer__logo img {
+  filter: invert(1);
+  height: 24px;
+}
+.footer__logo i {
+  padding-right: 11px;
+  color: var(--white);
+}
+.footer__link {
+  color: var(--white);
+  text-decoration: none;
+}
+.footer__list {
   display: flex;
   flex-direction: column;
   list-style: none;
   gap: 7px;
   padding: 0px;
-}
-footer ul a {
-  color: var(--white);
-  text-decoration: none;
-}
-
-.footer-logo img {
-  filter: invert(1);
-  height: 24px;
-}
-
-.footer-logo i {
-  padding-right: 11px;
-  color: var(--white);
 }
 
 @media (min-width: 768px) {
