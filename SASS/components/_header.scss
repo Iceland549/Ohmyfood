@@ -18,7 +18,8 @@
 
     &__logo {
         background-color: $white;
-        margin: 10px;
+        padding: 15px 90px 13px 90px;
+        justify-content: center;
 
         img {
             width: 162px;
@@ -29,11 +30,12 @@
     &__location {
         display: flex;
         flex-direction: row;
-        font-family: 'Roboto', sans-serif;
         background-color: $grey-2;
         gap: 10px;
-        padding: 10px 123px 10px 123px;
-
+        width: 100%;
+        justify-content: center;  
+        padding: 15px 0 15px 0;
+        
         &__icon {
             width: 12px;
             height: 16px;
