@@ -8,6 +8,11 @@ body {
   padding: 0;
 }
 
+.btn, .filter-section__btn {
+  border-radius: 20px;
+  background-image: linear-gradient(193 deg, #9356DC -11, 44%, rgba(255, 255, 119, 0.6) 123.93%);
+}
+
 .footer {
   display: flex;
   background-color: #353535;
@@ -31,4 +36,122 @@ body {
   list-style: none;
   gap: 7px;
   padding: 0px;
+}
+
+.logo {
+  color: #fff;
+}
+
+.fa-store {
+  color: #9356DC;
+}
+
+.header {
+  display: flex;
+}
+.header__container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+.header__logo {
+  background-color: #fff;
+  margin: 10px;
+}
+.header__logo img {
+  width: 162px;
+  height: 30px;
+}
+.header__location {
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto", sans-serif;
+  background-color: #EAEAEA;
+  gap: 10px;
+  padding: 10px 123px 10px 123px;
+}
+.header__location__icon {
+  width: 12px;
+  height: 16px;
+}
+
+.card, .cards-section__cards {
+  gap: 18px;
+}
+.card__content {
+  background-color: var(--white);
+  border-radius: 20px;
+}
+.card__content img {
+  width: 100%;
+  height: 231px;
+  border-radius: 20px 20px 0 0;
+}
+.card__title, .card__subtitle {
+  color: var(--black);
+  text-decoration: none;
+  margin: 0px;
+  gap: 7px;
+}
+.card__buttom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+.card__text {
+  display: flex;
+  flex-direction: column;
+}
+.card__icone {
+  display: flex;
+  flex-direction: column;
+}
+.card__buttom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__text {
+  display: flex;
+  flex-direction: column;
+}
+.card__icone {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.filter-section__title, .filter-section__subtitle, .filter-section__form {
+  text-align: center;
+}
+:root {
+  --bg-color: #f0f0f0;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+.cards-section {
+  background-color: var(--bg-color);
+  padding: 0 15px 0 15px;
+}
+.cards-section__title h2 {
+  margin: 0px;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  .main-content {
+    margin: 0 auto;
+    max-width: 800px;
+  }
 }/*# sourceMappingURL=accueil.css.map */

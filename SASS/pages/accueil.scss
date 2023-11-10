@@ -7,3 +7,59 @@
 @import "../components/main-btn";
 @import "../components/resto-card";
 
+.filter-section { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    &__title,
+    &__subtitle,
+    &__form {
+      text-align: center;
+    }
+
+    &__btn {
+        @extend .btn;
+    }
+}
+
+// Fichier _variables.scss
+:root {
+  --bg-color: #f0f0f0;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+
+// Fichier resto-card.scss
+.cards-section {
+  background-color: var(--bg-color);
+  padding: 0 15px 0 15px;
+
+  &__title {
+    h2 {
+      margin: 0px;
+    }
+  }
+
+  &__cards {
+      @extend .card;
+  } 
+}
+
+
+// Fichier main-btn.scss
+// Ajoutez ici les styles pour le bouton principal
+
+// Fichier accueil.scss ou restaurant.scss
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .main-content {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+}
