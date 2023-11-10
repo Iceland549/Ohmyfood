@@ -5,6 +5,7 @@
     &__content {
         background-color: var(--white);
         border-radius: 20px;
+        position: relative; 
 
         img {
             width: 100%;
@@ -28,6 +29,15 @@
         padding: 15px;
     }
 
+    &__badge {
+        position: absolute;
+        color: $green-2;
+        background-color: $green-1;
+        padding: 5px;
+        top: 12px; 
+        right: 12px;
+    }
+
     &__text { 
         display: flex;
         flex-direction: column;
@@ -35,22 +45,6 @@
     &__icone { 
         display: flex;
         flex-direction: column;   
-    }
 
-    &__buttom {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    &__text {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    &__icone {
-        display: flex;
-        flex-direction: column;
     }
 }
