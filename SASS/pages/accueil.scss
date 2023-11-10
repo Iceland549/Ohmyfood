@@ -1,11 +1,11 @@
 @import "../utils/variables";
 @import "../utils/base";
 @import "../utils/mixins";
-@import "../components/btn-function";
-@import "../components/footer";
 @import "../components/header";
 @import "../components/main-btn";
+@import "../components/btn-function";
 @import "../components/resto-card";
+@import "../components/footer";
 
 // Style for Filters Section ..................................//
 
@@ -14,24 +14,85 @@
   flex-direction: column;
   align-items: center;
   background-color: $bg-color;
+  padding-bottom: 50px;
+  
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    &__title {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    &__subtitle {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    
+    }
+  }  
 
-  &__title,
-  &__subtitle,
   &__form {
     text-align: center;
-    justify-content: center;
   }
 
-  &__btn {
-      @extend .btn;
+  &__main-btn {
+      @extend .main-btn;
   }
+}
+
+// Style for Navigation ............................................//
+
+
+.nav-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px 0 15px;
+
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    
+    &::before {
+      content: counter(item);
+      counter-increment: item;
+      border: 1px solid black;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px; // Pour les bordures arrondies
+      margin-bottom: 10px; // Pour l'espace entre les éléments
+
+    }
+  }
+}
+  
+.nav-section__list a {
+  text-decoration: none !important;
 }
 
 
 
 
-// Styele for Cards Section ........................................//
+// Style for Cards Section ........................................//
 
 .cards-section {
   background-color: var(--bg-color);

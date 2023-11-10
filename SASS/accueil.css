@@ -8,43 +8,6 @@ body {
   padding: 0;
 }
 
-.btn, .filter-section__btn {
-  border-radius: 25px;
-  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-  padding: 13px 18px 13px 18px;
-  color: #fff;
-  border: none;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-}
-.btn:hover, .filter-section__btn:hover {
-  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-}
-
-.footer {
-  display: flex;
-  background-color: #353535;
-  padding: 22px 25px;
-}
-.footer__logo img {
-  filter: invert(1);
-  height: 24px;
-}
-.footer__logo i {
-  padding-right: 11px;
-  color: var(--white);
-}
-.footer__link {
-  color: var(--white);
-  text-decoration: none;
-}
-.footer__list {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  gap: 7px;
-  padding: 0px;
-}
-
 .logo {
   color: #fff;
 }
@@ -83,6 +46,30 @@ body {
 .header__location__icon {
   width: 12px;
   height: 16px;
+}
+
+.main-btn, .filter-section__main-btn {
+  border-radius: 25px;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  padding: 13px 18px 13px 18px;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+.main-btn:hover, .filter-section__main-btn:hover {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+.main-btn, .filter-section__main-btn {
+  border-radius: 25px;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  padding: 13px 18px 13px 18px;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+.main-btn:hover, .filter-section__main-btn:hover {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
 .card, .cards-section__cards {
@@ -133,6 +120,31 @@ body {
   flex-direction: column;
 }
 
+.footer {
+  display: flex;
+  background-color: #353535;
+  padding: 22px 25px;
+}
+.footer__logo img {
+  filter: invert(1);
+  height: 24px;
+}
+.footer__logo i {
+  padding-right: 11px;
+  color: #fff;
+}
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 7px;
+  padding: 0px;
+}
+
 .filter-section {
   display: flex;
   flex-direction: column;
@@ -140,10 +152,62 @@ body {
   background-color: #F6F6F6;
   padding-bottom: 50px;
 }
-.filter-section__title, .filter-section__subtitle, .filter-section__form {
-  text-align: center;
+.filter-section__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.filter-section__text__title {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
 }
+.filter-section__text__subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.filter-section__form {
+  text-align: center;
+}
+.nav-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px 0 15px;
+}
+.nav-section__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+.nav-section__list::before {
+  content: counter(item);
+  counter-increment: item;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.nav-section__list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.nav-section__list a {
+  text-decoration: none !important;
+}
+
 .cards-section {
   background-color: var(--bg-color);
   padding: 0 15px 0 15px;
