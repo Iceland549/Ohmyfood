@@ -9,12 +9,12 @@ body {
   padding: 0;
 }
 
-.logo {
-  color: #fff;
-}
-
 .fa-store {
   color: #9356DC;
+}
+
+.logo {
+  color: #fff;
 }
 
 .header {
