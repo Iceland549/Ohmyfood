@@ -127,13 +127,14 @@ $breakpoint: 1440px;
 
 
 .cards-section {
-  background-color: var(--bg-color);
-  padding: 0 15px 0 15px;
+  background-color: $bg-color;
+  padding: 40px 15px;
 
-  &__title {
+  .cards-section-title {
     h2 {
-      margin: 0px;
+      margin-bottom: 20px;
     }
+    
   }
 
   &__cards {
