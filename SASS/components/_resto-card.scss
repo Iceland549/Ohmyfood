@@ -1,48 +1,51 @@
-// Style for MENU BLOCK........................................//
-.menu-block {
+.card {
+    gap: 18px;
+
     &__content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+        background-color: var(--white);
+        border-radius: 20px;
+        position: relative; 
+
+        img {
+            width: 100%;
+            height: 231px;
+            border-radius: 20px 20px 0 0;
+        }
     }
-  
-    &__title {
-      font-size: 1.5rem;
-      font-weight: bold;
+
+    &__title, &__subtitle {
+        color: var(--black);
+        text-decoration: none;
+        margin: 0px;
+        gap: 7px;
     }
-  
-    &__subtitle {
-      font-size: 1rem;
-      margin-top: 0.5rem;
+
+    &__buttom { 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
     }
-  
-    &__price {
-      font-size: 1.25rem;
+
+    &__badge {
+        position: absolute;
+        color: $green-2;
+        background-color: $green-1;
+        padding: 5px;
+        top: 12px; 
+        right: 12px;
+    }
+
+    &__text { 
+        display: flex;
+        flex-direction: column;
+    }
+    &__icone { 
+        display: flex;
+        flex-direction: column;   
+
     }
   }
-  
-  // Stylisation de chaque section (Entrées, Plats, Desserts)
-  .entrées {
-    .menu-block {
-      &__title {
-        color: #ff5722; // Exemple de couleur pour les entrées
-      }
-    }
-  }
-  
-  .plats {
-    .menu-block {
-      &__title {
-        color: #2196f3; // Exemple de couleur pour les plats
-      }
-    }
-  }
-  
-  .desserts {
-    .menu-block {
-      &__title {
-        color: #4caf50; // Exemple de couleur pour les desserts
-      }
-    }
-  }
+
   

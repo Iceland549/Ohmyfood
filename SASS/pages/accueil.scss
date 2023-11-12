@@ -9,37 +9,42 @@
 
 // Style for Filters Section ..................................//
 
+$breakpoint: 1440px;
+
 .filter-section { 
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $bg-color;
-  padding-bottom: 50px;
+  padding: 50px 0;
   
-  &__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .filter__text {
+    text-align: center; 
 
-    &__title {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
+    .filter-title__title {
+      margin: 0 0 15px 0;
     }
-    &__subtitle {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
+
+    .filter-title__subtitle {
+      padding: 0 15px;
+    }
+  }
     
-    }
-  }  
 
-  &__form {
+  &-form {
     text-align: center;
+    padding-top: 25px
   }
 
   &__btn-function {
       @extend .btn-function;
+  }
+  @media (min-width: $breakpoint) {
+    .filter-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 
@@ -72,7 +77,6 @@
   
   &__item {
     display: flex;
-    flex-direction: row;
     align-items: center;
     width: 100%;
     padding: 25px;
@@ -101,6 +105,16 @@
       margin-left: -20px;
     } 
   }
+  @media (min-width: $breakpoint) {
+    .nav-section{
+      display: flex;
+
+      &__item {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
 }
 
 
@@ -110,6 +124,7 @@
 
 
 // Style for Cards Section ........................................//
+
 
 .cards-section {
   background-color: var(--bg-color);
@@ -122,69 +137,24 @@
   }
 
   &__cards {
-
-    .card {
-      gap: 18px;
-  
-      &__content {
-          background-color: var(--white);
-          border-radius: 20px;
-          position: relative; 
-  
-          img {
-              width: 100%;
-              height: 231px;
-              border-radius: 20px 20px 0 0;
-          }
-      }
-  
-      &__title, &__subtitle {
-          color: var(--black);
-          text-decoration: none;
-          margin: 0px;
-          gap: 7px;
-      }
-  
-      &__buttom { 
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          padding: 15px;
-      }
-  
-      &__badge {
-          position: absolute;
-          color: $green-2;
-          background-color: $green-1;
-          padding: 5px;
-          top: 12px; 
-          right: 12px;
-      }
-  
-      &__text { 
-          display: flex;
-          flex-direction: column;
-      }
-      &__icone { 
-          display: flex;
-          flex-direction: column;   
-  
-      }
-    }
+    @extend .card;
   } 
+
+  @media (min-width: $breakpoint) {
+    .card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      
+
+    
+
+    }
+
+  }
+
 }
 
 
 
-// Style for @media querys ............................................//
-@media (min-width: 768px) {
-  body {
-    font-size: 18px;
-  }
 
-  .main-content {
-    margin: 0 auto;
-    max-width: 800px;
-  }
-}

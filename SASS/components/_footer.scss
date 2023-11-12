@@ -1,3 +1,6 @@
+$breakpoint: 1440px;
+
+
 .footer {
     display: flex;
     background-color: $footer-color;
@@ -28,6 +31,27 @@
       padding: 0px;
   
     }
-  }
+  
 
+  @media (min-width: $breakpoint) {
+    .footer {
+      display: flex;
+
+
+      &__logo {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+      }   
+      
+      &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+    }
+  }  
+}
 

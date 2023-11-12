@@ -7,48 +7,113 @@
 @import "../components/resto-card";
 @import "../components/footer";
 
-.resto-image {
-    width: 100%;
-    height: 231px;
-    overflow: hidden; 
-  
-    .resto-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; 
-    }
-}
-
+//..................................Style of HEADER................//
 .header {
     display: flex;
-
+  
     &__container {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      align-items: center; 
-      gap: 40px;
+      align-items: center;
+      gap: 40px; 
     }
   
     &__icon {
         .fa-solid.fa-arrow-left {
             font-size: 25px;
         }
-    }        
+    }
   
     &__logo {
         padding-left: 0px;
     }
 }
+
+//.....................................Style of Image............//
+
+.resto-image {
+    width: 100%;
+    height: 231px;
+    overflow: hidden; 
+  }
+  
+  .resto-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
   
 
+
+
+
+//..................................Style for Menu...............//
+
 .main-restaurant {
+    display: flex;
+    flex-direction: column;
     background-color: $bg-color;
-}
+    gap: 40px;
+    padding: 10px 15px 40px 15px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    
+    .restaurant__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
 
-.menu-form {
-    @extend .btn-function
-}
+        h1 {
+            padding-top: 20px;
+            margin: 0px;
+        }
 
 
+        &__icon {
+            .fa-regular.fa-heart {
+                font-size: 25px !important;
+            }
+        } 
+    }
 
+    .block-title h2 {
+        margin: 0px;
+        padding-bottom: 10px;
+    }
+
+    .block-title h2::after {
+        content: "";
+        display: block;
+        width: 12%; 
+        height: 3px;
+        background-color: $green-1;
+        margin-top: 5px; 
+    }
+
+
+    .menu-block {
+        display: flex;
+        background-color: $white;
+        padding:0 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+              
+        &__content {
+            display: flex;
+            flex-direction: column;
+
+            &__2 {
+                display: flex;
+                flex-direction: row;
+                gap: 140px;
+            }
+        } 
+    }
+
+    .menu-form {
+        @extend .btn-function;
+    }
+} 
