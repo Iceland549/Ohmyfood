@@ -22,30 +22,35 @@ p {
   color: #9356DC;
 }
 
-.fa-heart {
-  position: relative;
-  font-size: 24px;
+.fa-solid.fa-arrow-left {
+  font-size: 25px;
+}
+
+.fa-regular.fa-heart {
+  font-size: 25px;
+  color: #000000;
+}
+
+.fa-regular {
   cursor: pointer;
 }
-.fa-heart::before, .fa-heart::after {
+.fa-regular::before, .fa-regular::after {
   content: "";
-  position: absolute;
   width: 50%;
   height: 100%;
   top: 0;
-  background: red;
-  transition: width 0.3s ease-in-out;
+  transition: height 0.5s ease-in-out;
 }
-.fa-heart::before {
+.fa-regular::before {
   left: 0;
   border-radius: 100% 100% 0 0;
 }
-.fa-heart::after {
+.fa-regular::after {
   right: 0;
   border-radius: 100% 100% 0 0;
 }
-.fa-heart:hover::before, .fa-heart:hover::after {
-  width: 100%;
+.fa-regular:hover::before, .fa-regular:hover::after {
+  height: 100%;
 }
 
 .logo {
@@ -139,7 +144,7 @@ p {
   display: flex;
   flex-direction: column;
 }
-.card__icone {
+.card__icon {
   display: flex;
   flex-direction: column;
 }
