@@ -1,8 +1,7 @@
 
-
-
 h1 {
   font-family: 'Shrikhand', sans-serif;
+  font-weight: normal;
 }
 
 
@@ -29,6 +28,8 @@ p {
 
 .fa-solid.fa-arrow-left {
   font-size: 25px;
+  color: $black;
+
 }
 
 .fa-regular.fa-heart {

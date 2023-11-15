@@ -15,21 +15,26 @@
         }
     }
     
+    &__buttom { 
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        flex-flow: wrap;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
     &__title, &__subtitle {
         color: $black;
         text-decoration: none;
         margin: 0px;
         gap: 7px;
     }
-    
-    &__buttom { 
-        background-color: $white;
-        display: flex;
-        flex-direction: column;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        justify-content: space-between;
-        padding: 15px;
+
+    &__icon {
+        padding-right: 20px;
     }
     
     &__badge {
@@ -40,15 +45,7 @@
         top: 28px; 
         right: 12px;
     }
-    
-    &__text { 
-        display: flex;
-        flex-direction: column;
-    }
-    &__icon { 
-        flex-direction: column;   
 
-    }
   }
 
   

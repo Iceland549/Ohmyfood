@@ -21,26 +21,36 @@
 // Style for heart icon transition...................................//
 
 .card__icon {
-  
+  position: relative;
+  }
+
   .fa-regular.fa-heart,
   .fa-solid.fa-heart {
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
   }
   
   .fa-regular.fa-heart {
-    fill: transparent;
+      opacity: 1;
+      transition: opacity 1.5s ease-in-out;
   }
   
   .fa-solid.fa-heart {
-    fill: $btn-gradient-1;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+      color: $btn-gradient-1;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
   }
   
-  .card__icon:hover .fa-solid.fa-heart {
-    opacity: 1;
+  .card__icon:hover {
+    .fa-regular.fa-heart {
+        opacity: 0;
+    }
+    .fa-solid.fa-heart {
+        opacity: 1;
   }
 } 
 

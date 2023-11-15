@@ -1,5 +1,6 @@
 h1 {
   font-family: "Shrikhand", sans-serif;
+  font-weight: normal;
 }
 
 * {
@@ -24,6 +25,7 @@ p {
 
 .fa-solid.fa-arrow-left {
   font-size: 25px;
+  color: #000000;
 }
 
 .fa-regular.fa-heart {
@@ -43,26 +45,36 @@ p {
     opacity: 1;
   }
 }
-.card__icon .fa-regular.fa-heart,
-.card__icon .fa-solid.fa-heart {
+.card__icon {
+  position: relative;
+}
+
+.fa-regular.fa-heart,
+.fa-solid.fa-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
-.card__icon .fa-regular.fa-heart {
-  fill: transparent;
+
+.fa-regular.fa-heart {
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
 }
-.card__icon .fa-solid.fa-heart {
-  fill: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+
+.fa-solid.fa-heart {
+  color: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
 }
-.card__icon .card__icon:hover .fa-solid.fa-heart {
-  opacity: 1;
-}
 
-.logo {
-  color: #fff;
+.card__icon:hover .fa-regular.fa-heart {
+  opacity: 0;
+}
+.card__icon:hover .fa-solid.fa-heart {
+  opacity: 1;
 }
 
 .header {
@@ -107,6 +119,7 @@ p {
 }
 .btn-function:hover, .main-restaurant .menu-form__btn-function:hover {
   background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.35);
 }
 
 .card {
@@ -124,20 +137,24 @@ p {
   height: 180px;
   border-radius: 20px 20px 0 0;
 }
+.card__buttom {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  justify-content: space-between;
+  padding: 15px;
+}
 .card__title, .card__subtitle {
   color: #000000;
   text-decoration: none;
   margin: 0px;
   gap: 7px;
 }
-.card__buttom {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  justify-content: space-between;
-  padding: 15px;
+.card__icon {
+  padding-right: 20px;
 }
 .card__badge {
   position: absolute;
@@ -146,13 +163,6 @@ p {
   padding: 5px;
   top: 28px;
   right: 12px;
-}
-.card__text {
-  display: flex;
-  flex-direction: column;
-}
-.card__icon {
-  flex-direction: column;
 }
 
 .footer {
@@ -208,6 +218,7 @@ p {
 }
 .header__logo {
   padding-left: 0px;
+  margin-right: 40px;
 }
 
 .block-title,
@@ -267,7 +278,10 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: baseline;
+}
+.main-restaurant .restaurant__title__icon {
+  contain: strict;
 }
 .main-restaurant .restaurant__title h1 {
   padding-top: 20px;

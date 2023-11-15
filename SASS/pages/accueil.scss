@@ -9,29 +9,40 @@
 
 // Style LOADER ................................................//
 
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $btn-gradient-1; /* Couleur de fond du loader */
-  z-index: 9999;
-  animation: loaderAnimation 3s ease-in-out 0s 1; /* Animation de 1.5 secondes */
+.progress {
+  &__bar {
+      animation: progress-bar 1000ms forwards;
+      height: 15px; 
+      background-color: $primary-color; 
+      opacity: 1; /* Opacité par défaut */
+
+  }
 }
 
-@keyframes loaderAnimation {
+@keyframes progress-bar{
   0% {
-    opacity: 1; /* Au début, le loader est visible */
+      transform: scaleX(0);
+      opacity: .1;
   }
-  90% {
-    opacity: 1; /* Reste visible pendant 90% du temps d'animation */
+  17% {
+      transform: scaleX(.18);
+  }
+  24% {
+      transform: scaleX(.4);
+  }
+  46% {
+      transform: scaleX(.81);
+  }
+  85%,100% {
+      opacity: 1;
   }
   100% {
-    opacity: 0; /* À la fin, le loader disparaît */
-    visibility: hidden; /* Cache le loader après l'animation */
+      opacity: 0;;
   }
 }
+
+// Style HEADER ................................................//
+
 
 
 // Style for Filters Section ..................................//
