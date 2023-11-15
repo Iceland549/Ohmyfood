@@ -7,9 +7,35 @@
 @import "../components/resto-card";
 @import "../components/footer";
 
+// Style LOADER ................................................//
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $btn-gradient-1; /* Couleur de fond du loader */
+  z-index: 9999;
+  animation: loaderAnimation 3s ease-in-out 0s 1; /* Animation de 1.5 secondes */
+}
+
+@keyframes loaderAnimation {
+  0% {
+    opacity: 1; /* Au début, le loader est visible */
+  }
+  90% {
+    opacity: 1; /* Reste visible pendant 90% du temps d'animation */
+  }
+  100% {
+    opacity: 0; /* À la fin, le loader disparaît */
+    visibility: hidden; /* Cache le loader après l'animation */
+  }
+}
+
+
 // Style for Filters Section ..................................//
 
-$breakpoint: 1440px;
 
 .filter-section { 
   display: flex;
@@ -30,9 +56,8 @@ $breakpoint: 1440px;
       padding: 0 15px;
     }
   }
-    
-
-  &-form {
+  
+  &__btn-function {
     text-align: center;
       @extend .btn-function;
   }

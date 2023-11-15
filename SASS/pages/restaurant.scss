@@ -16,7 +16,7 @@
       flex-direction: row;
       justify-content: space-evenly;
       align-items: center;
-      gap: 40px; 
+      gap: 0px; 
     
     }
   
@@ -25,7 +25,40 @@
     }
 }
 
-//.....................................Style of Image............//
+// Style fading transition of Menu pages..............................//
+
+.block-title,
+.menu-block {
+  @include fadeIn(0s);
+}
+
+.block-entrees,
+.block-plats,
+.block-desserts {
+  > .block-title,
+  > .menu-block {
+    @include fadeIn($transition-delay); 
+  }
+
+  &:nth-child(odd) {
+    > .menu-block {
+      @include fadeIn($transition-delay * 2); 
+    }
+  }
+
+  &:nth-child(even) {
+    > .menu-block {
+      @include fadeIn($transition-delay * 3); 
+    }
+  }
+}
+
+// Style Ajout Plats.......................................// 
+
+
+
+
+//Style of Image..........................................//
 
 .resto-image {
     width: 100%;
@@ -102,17 +135,15 @@
         } 
     }
 
-    .menu-form {
-        display: flex;
-        justify-content: center;
-        margin-inline: auto;
-        padding: 10px 40px;
-        @extend .btn-function;
 
-        &__btn-function {
-            background: $btn-gradient-2;
-            border: none;
-            color: $white;
-        }
-    }
+      
+  .menu-form__btn-function {
+      display: flex;
+      justify-content: center;
+      padding: 15px 50px;
+      margin: auto;
+      @extend .btn-function;
+
+    
+  }
 } 

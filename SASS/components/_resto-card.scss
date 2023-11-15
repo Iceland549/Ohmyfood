@@ -25,14 +25,13 @@
     &__buttom { 
         background-color: $white;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-        align-items: center;
         justify-content: space-between;
         padding: 15px;
     }
-
+    
     &__badge {
         position: absolute;
         color: $green-2;
@@ -41,13 +40,12 @@
         top: 28px; 
         right: 12px;
     }
-
+    
     &__text { 
         display: flex;
         flex-direction: column;
     }
     &__icon { 
-        display: flex;
         flex-direction: column;   
 
     }
