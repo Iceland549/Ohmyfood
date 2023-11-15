@@ -1,4 +1,3 @@
-@charset "UTF-8";
 h1 {
   font-family: "Shrikhand", sans-serif;
   font-weight: normal;
@@ -76,27 +75,6 @@ p {
 }
 .card__icon:hover .fa-solid.fa-heart {
   opacity: 1;
-}
-
-.plat {
-  position: relative;
-  overflow: hidden;
-  width: 200px; /* Largeur du conteneur du plat */
-}
-.plat .plat__nom {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 180px; /* Largeur maximale avant le rognage */
-}
-.plat .plat__coche {
-  position: absolute;
-  top: 0;
-  right: -20px; /* Initial position - cachée */
-  transition: transform 0.3s ease-in-out;
-}
-.plat:hover .plat__coche {
-  transform: translateX(-30px); /* Déplacement lors du survol */
 }
 
 .header {
@@ -228,32 +206,25 @@ p {
   }
 }
 
-.progress__bar {
-  animation: progress-bar 1000ms forwards;
-  height: 15px;
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: #9356DC;
-  opacity: 1; /* Opacité par défaut */
+  opacity: 1;
+  z-index: 9999;
+  animation: fadeOut 3s forwards;
 }
 
-@keyframes progress-bar {
+@keyframes fadeOut {
   0% {
-    transform: scaleX(0);
-    opacity: 0.1;
-  }
-  17% {
-    transform: scaleX(0.18);
-  }
-  24% {
-    transform: scaleX(0.4);
-  }
-  46% {
-    transform: scaleX(0.81);
-  }
-  85%, 100% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 .filter-section {

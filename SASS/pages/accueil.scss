@@ -9,37 +9,28 @@
 
 // Style LOADER ................................................//
 
-.progress {
-  &__bar {
-      animation: progress-bar 1000ms forwards;
-      height: 15px; 
-      background-color: $primary-color; 
-      opacity: 1; 
-
-  }
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $primary-color; 
+  opacity: 1;
+  z-index: 9999; 
+  animation: fadeOut 3s forwards; 
 }
 
-@keyframes progress-bar{
+@keyframes fadeOut {
   0% {
-      transform: scaleX(0);
-      opacity: .1;
-  }
-  17% {
-      transform: scaleX(.18);
-  }
-  24% {
-      transform: scaleX(.4);
-  }
-  46% {
-      transform: scaleX(.81);
-  }
-  85%,100% {
-      opacity: 1;
+    opacity: 1;
   }
   100% {
-      opacity: 0;;
+    opacity: 0;
+    visibility: hidden; 
   }
 }
+
 
 // Style HEADER ................................................//
 
