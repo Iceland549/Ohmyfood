@@ -302,7 +302,7 @@ p {
 .main-restaurant .menu-block {
   display: flex;
   background-color: #fff;
-  padding: 0 10px;
+  padding: 10px 10px;
   margin-bottom: 10px;
   border-radius: 10px;
 }
