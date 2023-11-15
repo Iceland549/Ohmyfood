@@ -40,18 +40,42 @@
   }
   
   .fa-solid.fa-heart {
-      color: $btn-gradient-1;
-      opacity: 0;
-      transition: opacity 1.5s ease-in-out;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
   }
   
   .card__icon:hover {
     .fa-regular.fa-heart {
-        opacity: 0;
+      opacity: 0;
     }
     .fa-solid.fa-heart {
-        opacity: 1;
+      opacity: 1;
   }
 } 
 
-  
+// Style Add Dish ..................................//
+
+.plat {
+  position: relative;
+  overflow: hidden;
+  width: 200px; /* Largeur du conteneur du plat */
+
+  .plat__nom {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px; /* Largeur maximale avant le rognage */
+  }
+
+  .plat__coche {
+    position: absolute;
+    top: 0;
+    right: -20px; /* Initial position - cachée */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover .plat__coche {
+    transform: translateX(-30px); /* Déplacement lors du survol */
+  }
+}
+

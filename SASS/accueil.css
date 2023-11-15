@@ -36,6 +36,7 @@ p {
 
 .fa-solid.fa-heart {
   font-size: 25px;
+  color: #9356DC;
 }
 
 @keyframes fadeInAnimation {
@@ -66,7 +67,6 @@ p {
 }
 
 .fa-solid.fa-heart {
-  color: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
 }
@@ -76,6 +76,27 @@ p {
 }
 .card__icon:hover .fa-solid.fa-heart {
   opacity: 1;
+}
+
+.plat {
+  position: relative;
+  overflow: hidden;
+  width: 200px; /* Largeur du conteneur du plat */
+}
+.plat .plat__nom {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px; /* Largeur maximale avant le rognage */
+}
+.plat .plat__coche {
+  position: absolute;
+  top: 0;
+  right: -20px; /* Initial position - cachée */
+  transition: transform 0.3s ease-in-out;
+}
+.plat:hover .plat__coche {
+  transform: translateX(-30px); /* Déplacement lors du survol */
 }
 
 .header {
