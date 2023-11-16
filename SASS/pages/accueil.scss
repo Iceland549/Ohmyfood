@@ -58,6 +58,10 @@
 
     .filter-title__title {
       margin: 0 0 15px 0;
+      .h1 {
+        font-family: 'Roboto',sans-serif;
+        font-weight: bold;
+      }
     }
 
     .filter-title__subtitle {
