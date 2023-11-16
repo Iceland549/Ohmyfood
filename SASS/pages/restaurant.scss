@@ -2,28 +2,26 @@
 @import "../utils/base";
 @import "../utils/mixins";
 @import "../components/header";
-@import "../components/main-btn";
 @import "../components/btn-function";
 @import "../components/resto-card";
 @import "../components/footer";
 
 //..................................Style of HEADER................//
 .header {
+  display: flex;
+
+  &__container {
     display: flex;
-  
-    &__container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-      gap: 0px; 
-    
-    }
-  
-    &__logo {
-        padding-left: 0px;
-        margin-right: 40px
-    }
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0px;
+  }
+
+  &__logo {
+    padding-left: 0px;
+    margin-right: 40px;
+  }
 }
 
 // Style fading transition of Menu pages..............................//
@@ -38,120 +36,134 @@
 .block-desserts {
   > .block-title,
   > .menu-block {
-    @include fadeIn($transition-delay); 
+    @include fadeIn($transition-delay);
   }
 
   &:nth-child(odd) {
     > .menu-block {
-      @include fadeIn($transition-delay * 2); 
+      @include fadeIn($transition-delay * 2);
     }
   }
 
   &:nth-child(even) {
     > .menu-block {
-      @include fadeIn($transition-delay * 3); 
+      @include fadeIn($transition-delay * 3);
     }
   }
 }
 
-// Style Ajout Plats.......................................// 
-
-
-
+// Style Ajout Plats.......................................//
 
 //Style of Image..........................................//
 
 .resto-image {
-    width: 100%;
-    height: 231px;
-    overflow: hidden; 
-  }
-  
-  .resto-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
+  width: 100%;
+  height: 231px;
+  overflow: hidden;
 }
 
-  
-
-
-
+.resto-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 //..................................Style for Menu...............//
 
 .main-restaurant {
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-color;
+  gap: 40px;
+  padding: 10px 15px 40px 15px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+  .restaurant__title {
     display: flex;
-    flex-direction: column;
-    background-color: $bg-color;
-    gap: 40px;
-    padding: 10px 15px 40px 15px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 
-
-    
-    .restaurant__title {
+    .card__icon {
       display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-
-        .card__icon {
-          display: flex; 
-          @extend .card__icon;
-        }
-
-        h1 {
-            padding-top: 20px;
-            margin: 0px;
-        }
-
+      @extend .card__icon;
     }
 
-    .block-title h2 {
-        margin: 0px;
-        padding-bottom: 10px;
+    h1 {
+      padding-top: 20px;
+      margin: 0px;
     }
-
-    .block-title h2::after {
-        content: "";
-        display: block;
-        width: 12%; 
-        height: 3px;
-        background-color: $green-1;
-        margin-top: 5px; 
-    }
-
-
-    .menu-block {
-        display: flex;
-        background-color: $white;
-        padding:10px 10px;
-        margin-bottom: 10px;
-        border-radius: 10px;
-              
-        &__content {
-            display: flex;
-            flex-direction: column;
-
-            &__2 {
-                display: flex;
-                flex-direction: row;
-                gap: 140px;
-            }
-        } 
-    }
-
-
-      
-  .menu-form__btn-function {
-      display: flex;
-      justify-content: center;
-      padding: 15px 50px;
-      margin: auto;
-      @extend .btn-function;
-
-    
   }
-} 
+
+  .block-title h2 {
+    margin: 0px;
+    padding-bottom: 10px;
+  }
+
+  .block-title h2::after {
+    content: "";
+    display: block;
+    width: 12%;
+    height: 3px;
+    background-color: $green-1;
+    margin-top: 5px;
+  }
+
+  .menu-block {
+    display: flex;
+    background-color: $white;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+
+      &__1 {
+        position: relative;
+        cursor: pointer;
+
+
+        .menu-block__title {
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          transition: max-width 2s ease-in-out;
+          
+          &:hover {
+            max-width: calc(100% - 20px);
+          }
+        }
+        .menu-block__icon {
+          opacity: 0;
+          position: absolute;
+          right: -15px;
+          transition: opacity 2s ease-in-out;
+        }
+        &:hover {
+          .menu-block__icon {
+            transform: translateX(25px);
+            opacity: 1;
+          }
+        }
+      }
+
+      &__2 {
+        display: flex;
+        flex-direction: row;
+        gap: 140px;
+      }
+    }
+  }
+
+  .menu-form__btn-function {
+    display: flex;
+    justify-content: center;
+    padding: 15px 50px;
+    margin: auto;
+    @extend .btn-function;
+  }
+}
