@@ -175,38 +175,11 @@
   }
 }
 
-// Style Animation Coche - Rognage .................//
+// Style Checkbox .................//
 
 .main-restaurant {
   .menu-block {
-    position: relative;
-    overflow: hidden;
-
-    .menu-block__title {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      position: relative;
-      transition: max-width 0.5s ease-in-out;
-      
-      &:hover {
-        max-width: 10ch;
-      }
-    }
-
-    .menu-block__icon {
-      opacity: 0;
-      transform: translateX(100%);
-      transition: all 0.5s ease-in-out;
-      position: absolute;
-      right: 0;
-    }
-
-    &:hover .menu-block__icon {
-      transform: translateX(0);
-      opacity: 1;
-      
-    }
+    @extend .menu-block;
   }
 }
 

@@ -72,6 +72,32 @@ p {
   opacity: 1;
 }
 
+.menu-block, .main-restaurant .menu-block {
+  position: relative;
+  overflow: hidden;
+}
+.menu-block .menu-block__title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  transition: max-width 0.5s ease-in-out;
+}
+.menu-block .menu-block__title:hover {
+  max-width: 10ch;
+}
+.menu-block .menu-block__icon {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  right: 0;
+}
+.menu-block:hover .menu-block__icon {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .header {
   display: flex;
 }
@@ -249,7 +275,8 @@ p {
   }
 }
 .block-title,
-.menu-block {
+.menu-block,
+.main-restaurant .menu-block {
   opacity: 0;
   animation: fadeInAnimation 2s forwards;
   animation-delay: 0s;
@@ -356,32 +383,6 @@ p {
   justify-content: center;
   padding: 15px 50px;
   margin: auto;
-}
-
-.main-restaurant .menu-block {
-  position: relative;
-  overflow: hidden;
-}
-.main-restaurant .menu-block .menu-block__title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  position: relative;
-  transition: max-width 0.5s ease-in-out;
-}
-.main-restaurant .menu-block .menu-block__title:hover {
-  max-width: 10ch;
-}
-.main-restaurant .menu-block .menu-block__icon {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: all 0.5s ease-in-out;
-  position: absolute;
-  right: 0;
-}
-.main-restaurant .menu-block:hover .menu-block__icon {
-  transform: translateX(0);
-  opacity: 1;
 }
 
 @media (min-width: 1440px) {
