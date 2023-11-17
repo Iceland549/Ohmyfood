@@ -13,18 +13,40 @@
   &__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
-    gap: 60px;
+  }
+  
+  &__logo {
+    padding-left: 75px;
   }
 
   &__icon {
-    display: flex;
-  }
+    padding: 0 0 5px 15px;
 
-  &__logo {
-    padding-right: 50px;
-    margin-right: 40px;
+  }
+  
+
+}
+
+@media (min-width: $breakpoint) {
+  .header {
+    display: flex;
+
+    &__container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    &__icon {
+      display: flex;
+    }
+  
+    &__logo {
+      padding-right: 50px;
+      margin-right: 40px;
+    }
   }
 }
 
@@ -84,7 +106,7 @@
   flex-direction: column;
   background-color: $bg-color;
   gap: 40px;
-  padding: 10px 15px 40px 15px;
+  padding: 40px 15px 40px 15px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   z-index: 3;
@@ -100,11 +122,11 @@
     .card__icon {
       display: flex;
       @extend .card__icon;
+      margin-bottom: 25px;
     }
     
     h1 {
       font-weight: unset;
-      padding-top: 20px;
       margin: 0px;
       font-family: 'Shrikhand', sans-serif;
     }
@@ -130,49 +152,16 @@
     padding: 10px 10px;
     margin-bottom: 10px;
     border-radius: 10px;
-    white-space: nowrap; 
 
     &__content {
       display: flex;
       flex-direction: column;
 
-      &__1 {
-        position: relative;
-        cursor: pointer;
 
-
-        .menu-block__title {
-          width: 100%;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          transition: max-width 2s ease-in-out;
-          
-          &:hover {
-            max-width: calc(100% - 20px);
-          }
-        }
-        .menu-block__icon {
-          opacity: 0;
-          position: absolute;
-          right: -15px;
-          transition: opacity 2s ease-in-out;
-        }
-        &:hover {
-          .menu-block__icon {
-            transform: translateX(25px);
-            opacity: 1;
-          }
-        }
-      }
 
       &__2 {
         display: flex;
         flex-direction: row;
-
-        &__price {
-          display: flex;
-          align-items: flex-end;
-        }
       }
     }
   }
@@ -183,5 +172,70 @@
     padding: 15px 50px;
     margin: auto;
     @extend .btn-function;
+  }
+}
+
+// Style Animation Coche - Rognage .................//
+
+.main-restaurant {
+  .menu-block {
+    position: relative;
+    overflow: hidden;
+
+    .menu-block__title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: relative;
+      transition: max-width 0.5s ease-in-out;
+      
+      &:hover {
+        max-width: 10ch;
+      }
+    }
+
+    .menu-block__icon {
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.5s ease-in-out;
+      position: absolute;
+      right: 0;
+    }
+
+    &:hover .menu-block__icon {
+      transform: translateX(0);
+      opacity: 1;
+      
+    }
+  }
+}
+
+
+    
+
+
+// Style @media query ..............................//
+
+@media (min-width: $breakpoint) {
+  .main-restaurant {
+    z-index: 3;
+    position: relative;
+    margin: -40px 190px 2px;
+    padding: 0 200px 30px;
+    }
+
+  .resto-image {
+    z-index: 1;
+    position: relative;
+  }
+
+  .restaurant__title {
+    margin-inline: auto;
+    padding-top: 30px;
+
+  }
+
+  .card__icon {
+    margin-left: 20px;
   }
 }
