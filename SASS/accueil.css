@@ -135,6 +135,7 @@ p {
 }
 .card__content a {
   position: relative;
+  text-decoration: none;
   z-index: 3;
 }
 .card__buttom {
