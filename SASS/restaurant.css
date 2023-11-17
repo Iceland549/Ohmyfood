@@ -30,7 +30,7 @@ p {
 
 .fa-solid.fa-heart {
   font-size: 25px;
-  color: #9356DC;
+  color: #FF79DA;
 }
 
 @keyframes fadeInAnimation {
@@ -391,6 +391,9 @@ p {
     position: relative;
     margin: -40px 190px 2px;
     padding: 0 200px 30px;
+  }
+  .block-title h2::after {
+    width: 4%;
   }
   .resto-image {
     z-index: 1;

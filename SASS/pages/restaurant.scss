@@ -142,7 +142,7 @@
     display: block;
     width: 12%;
     height: 3px;
-    background-color: $green-1;
+    background-color: $third-color;
     margin-top: 5px;
   }
 
@@ -175,6 +175,7 @@
   }
 }
 
+
 // Style Checkbox .................//
 
 .main-restaurant {
@@ -195,6 +196,10 @@
     position: relative;
     margin: -40px 190px 2px;
     padding: 0 200px 30px;
+    }
+
+    .block-title h2::after {
+      width: 4%;
     }
 
   .resto-image {
