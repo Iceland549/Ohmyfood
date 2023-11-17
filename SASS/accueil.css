@@ -132,6 +132,7 @@ p {
   object-fit: cover;
   height: 180px;
   border-radius: 20px 20px 0 0;
+  position: relative;
 }
 .card__content a {
   position: relative;
@@ -159,6 +160,9 @@ p {
   padding-right: 20px;
   z-index: 2;
 }
+.card .card__image-container, .cards-section__cards .card__image-container {
+  position: relative;
+}
 .card__badge {
   position: absolute;
   color: #008766;
@@ -166,6 +170,7 @@ p {
   padding: 5px;
   top: 28px;
   right: 12px;
+  z-index: 4;
 }
 
 .footer {
