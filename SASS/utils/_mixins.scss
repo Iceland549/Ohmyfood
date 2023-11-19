@@ -23,7 +23,7 @@
   }
 }
 
-@media (min-width: $breakpoint) {
+@media (min-width: $breakpoint-1) and (max-width: $breakpoint-2) {
 
   .loader {
     height: 130vh; 

@@ -27,7 +27,7 @@
 
 }
 
-@media (min-width: $breakpoint) {
+@media (min-width: $breakpoint-1) and (max-width: $breakpoint-2) {
   .header {
     display: flex;
 
@@ -184,7 +184,7 @@
 
 // Style @media query ..............................//
 
-@media (min-width: $breakpoint) {
+@media (min-width: $breakpoint-1) and (max-width: $breakpoint-2) {
   .main-restaurant {
     z-index: 3;
     position: relative;
