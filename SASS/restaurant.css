@@ -128,7 +128,7 @@ p {
 }
 .menu-block .menu-block__icon {
   opacity: 0;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   transition: all 0.5s ease-in-out;
   position: absolute;
   right: 0;
@@ -402,10 +402,12 @@ p {
 }
 .main-restaurant .menu-block {
   display: flex;
+  flex-direction: column;
   background-color: #fff;
   padding: 10px 10px;
   margin-bottom: 10px;
   border-radius: 10px;
+  flex-grow: 1;
 }
 .main-restaurant .menu-block__content {
   display: flex;
@@ -413,7 +415,7 @@ p {
 }
 .main-restaurant .menu-block__content__2 {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
 }
 .main-restaurant .menu-form__btn-function {
   display: flex;
