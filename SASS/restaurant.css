@@ -287,14 +287,13 @@ p {
 .header__container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-.header__logo {
-  padding-left: 75px;
+  justify-content: center;
+  position: relative;
 }
 .header__icon {
-  padding: 0 0 5px 15px;
+  display: flex;
+  position: absolute;
+  left: 17px;
 }
 
 @media (min-width: 1440px) {
@@ -303,15 +302,14 @@ p {
   }
   .header__container {
     display: flex;
+    position: relative;
     justify-content: center;
     gap: 50px;
   }
   .header__icon {
     display: flex;
-  }
-  .header__logo {
-    padding-right: 50px;
-    margin-right: 40px;
+    position: absolute;
+    left: 17px;
   }
 }
 .block-title,
@@ -395,7 +393,7 @@ p {
 .main-restaurant .block-title h2::after {
   content: "";
   display: block;
-  width: 12%;
+  width: 40px;
   height: 3px;
   background-color: #99E2D0;
   margin-top: 5px;

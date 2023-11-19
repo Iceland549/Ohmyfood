@@ -13,17 +13,15 @@
   &__container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    position: relative;
   }
   
-  &__logo {
-    padding-left: 75px;
-  }
 
   &__icon {
-    padding: 0 0 5px 15px;
-
+    display: flex;
+    position: absolute;
+    left: 17px;
   }
   
 
@@ -35,17 +33,15 @@
 
     &__container {
       display: flex;
+      position: relative;
       justify-content: center;
       gap: 50px;
     }
 
     &__icon {
       display: flex;
-    }
-  
-    &__logo {
-      padding-right: 50px;
-      margin-right: 40px;
+      position: absolute;
+      left: 17px;
     }
   }
 }
@@ -138,7 +134,7 @@
   .block-title h2::after {
     content: "";
     display: block;
-    width: 12%;
+    width: 40px;
     height: 3px;
     background-color: $third-color;
     margin-top: 5px;
