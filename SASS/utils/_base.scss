@@ -35,6 +35,17 @@ p {
 }
 
 .fa-solid.fa-heart {
+  display: inline-block; 
   font-size: 25px;
-  color: $second-color;
+  
+  /* Crée le dégradé */
+  background-image: $btn-gradient-1;
+  background-size: 100%; 
+
+  /* Utilise l'icône comme masque pour le dégradé */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
+

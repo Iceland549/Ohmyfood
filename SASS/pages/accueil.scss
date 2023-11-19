@@ -9,33 +9,7 @@
 // Style LOADER ................................................//
 
 .loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-image: url('../assets/images/loader/eiliv-aceron-ZuIDLSz3XLg-unsplash.jpg'); 
-  background-size: cover; 
-  opacity: 1;
-  z-index: 9999; 
-  animation: fadeOut 3s forwards; 
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden; 
-  }
-}
-
-@media (min-width: $breakpoint) {
-
-  .loader {
-    height: 130vh; 
-  }
+  @extend .loader;
 }
 
 // Style HEADER ................................................//
