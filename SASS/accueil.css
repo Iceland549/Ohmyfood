@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -29,10 +30,45 @@ p {
 }
 
 .fa-solid.fa-heart {
+  display: inline-block;
   font-size: 25px;
-  color: #FF79DA;
+  /* Crée le dégradé */
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-size: 100%;
+  /* Utilise l'icône comme masque pour le dégradé */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/images/loader/eiliv-aceron-ZuIDLSz3XLg-unsplash.jpg");
+  background-size: cover;
+  opacity: 1;
+  z-index: 9999;
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@media (min-width: 1440px) {
+  .loader {
+    height: 130vh;
+  }
+}
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -75,6 +111,10 @@ p {
 .menu-block {
   position: relative;
   overflow: hidden;
+}
+.menu-block .menu-block__content__1 {
+  display: flex;
+  align-items: center;
 }
 .menu-block .menu-block__title {
   white-space: nowrap;
@@ -182,9 +222,9 @@ p {
   gap: 7px;
 }
 .card__icon {
-  position: relative;
   padding-right: 20px;
   z-index: 2;
+  cursor: none;
 }
 .card .card__image-container, .cards-section__cards .card__image-container {
   position: relative;
@@ -239,33 +279,6 @@ p {
     display: flex;
     flex-direction: row;
     gap: 30px;
-  }
-}
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-image: url("../assets/images/loader/eiliv-aceron-ZuIDLSz3XLg-unsplash.jpg");
-  background-size: cover;
-  opacity: 1;
-  z-index: 9999;
-  animation: fadeOut 3s forwards;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-@media (min-width: 1440px) {
-  .loader {
-    height: 130vh;
   }
 }
 .filter-section {
