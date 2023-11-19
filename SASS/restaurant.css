@@ -224,7 +224,7 @@ p {
 .card__icon, .main-restaurant .restaurant__title .card__icon {
   padding-right: 20px;
   z-index: 2;
-  cursor: none;
+  pointer-events: none;
 }
 .card .card__image-container {
   position: relative;
