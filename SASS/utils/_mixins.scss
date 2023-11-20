@@ -63,7 +63,6 @@
       left: 0;
       width: 100%;
       height: 100%;
-      cursor: pointer;
   }
   
   .fa-regular.fa-heart {
@@ -90,13 +89,16 @@
 .menu-block {
   position: relative;
   overflow: hidden;
+  height: 100%;
 
-  .menu-block__content__1 {
+  &__content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    position: relative;
+    height: 100%;
   }
 
-  .menu-block__title {
+  &__title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -104,22 +106,68 @@
     transition: max-width 0.5s ease-in-out;
     
     &:hover {
-      max-width: 10ch;
+      max-width: 22ch;
     }
   }
 
-  .menu-block__icon {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: all 0.5s ease-in-out;
-    position: absolute;
-    right: 0;
+  &__subtitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    transition: max-width 0.5s ease-in-out;
+    
+    &:hover {
+      max-width: 25ch;
+    }
   }
 
-  &:hover .menu-block__icon {
+  &__select-btn {
+    opacity: 0;
+    transform: translateX(-80%);
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+    margin: 0;
+    top: 0;
+    right: 0;
+
+  }
+
+  &:hover .menu-block__select-btn {
     transform: translateX(0);
     opacity: 1;
-    
+    background: $third-color;
+    padding: 20px;
+    margin: 0;
+    top: 0;
+    right: 0;
+
+  }
+
+  &__icon {
+    border: none;
+    color: $white;
+  }
+
+  &__price {
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+    position: absolute;
+    right: 0px;
+  }
+  
+  &:hover .menu-block__price {
+    transform: translateX(-65px);
   }
 }
 
+@media (min-width: $breakpoint-1) and (max-width: $breakpoint-2) {
+  .menu-block__subtitle {
+    text-overflow: unset;
+    overflow: unset;
+  }
+}
