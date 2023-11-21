@@ -50,7 +50,7 @@
 
 .block-title,
 .menu-block {
-  @include fadeIn(0s);
+  @include fadeIn(1s);
 }
 
 .block-entrees,
@@ -111,7 +111,6 @@
     
     .card__icon {
       display: flex;
-      @extend .card__icon;
       margin-bottom: 25px;
     }
     
@@ -121,6 +120,7 @@
       font-family: 'Shrikhand', sans-serif;
     }
   }
+
 
   .block-title h2 {
     margin: 0px;

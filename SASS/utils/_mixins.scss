@@ -104,10 +104,10 @@
     text-overflow: ellipsis;
     position: relative;
     transition: max-width 0.5s ease-in-out;
+  }
     
-    &:hover {
-      max-width: 22ch;
-    }
+  &:hover .menu-block__title {
+    max-width: 22ch;
   }
 
   &__subtitle {
@@ -116,10 +116,10 @@
     text-overflow: ellipsis;
     position: relative;
     transition: max-width 0.5s ease-in-out;
+  }
     
-    &:hover {
-      max-width: 25ch;
-    }
+  &:hover .menu-block__subtitle {
+    max-width: 25ch;
   }
 
   &__select-btn {
