@@ -365,26 +365,16 @@ p {
   animation-delay: 0s;
 }
 
-.block-entrees > .block-title,
-.block-entrees > .menu-block,
-.block-plats > .block-title,
-.block-plats > .menu-block,
-.block-desserts > .block-title,
-.block-desserts > .menu-block {
-  opacity: 0;
-  animation: fadeInAnimation 2s forwards;
-  animation-delay: 1s;
-}
-.block-entrees:nth-child(odd) > .menu-block,
-.block-plats:nth-child(odd) > .menu-block,
-.block-desserts:nth-child(odd) > .menu-block {
+.block-entrees:nth-child(even) > .menu-block,
+.block-plats:nth-child(even) > .menu-block,
+.block-desserts:nth-child(even) > .menu-block {
   opacity: 0;
   animation: fadeInAnimation 2s forwards;
   animation-delay: 2s;
 }
-.block-entrees:nth-child(even) > .menu-block,
-.block-plats:nth-child(even) > .menu-block,
-.block-desserts:nth-child(even) > .menu-block {
+.block-entrees:nth-child(odd) > .menu-block,
+.block-plats:nth-child(odd) > .menu-block,
+.block-desserts:nth-child(odd) > .menu-block {
   opacity: 0;
   animation: fadeInAnimation 2s forwards;
   animation-delay: 3s;

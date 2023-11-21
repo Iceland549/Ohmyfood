@@ -56,18 +56,14 @@
 .block-entrees,
 .block-plats,
 .block-desserts {
-  > .block-title,
-  > .menu-block {
-    @include fadeIn($transition-delay);
-  }
 
-  &:nth-child(odd) {
+  &:nth-child(even) {
     > .menu-block {
       @include fadeIn($transition-delay * 2);
     }
   }
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
     > .menu-block {
       @include fadeIn($transition-delay * 3);
     }
