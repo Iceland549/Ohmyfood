@@ -6,32 +6,23 @@
 @import "../components/resto-card";
 @import "../components/footer";
 
-// Style LOADER ................................................//
-
-
-
-// Style HEADER ................................................//
-
-
-
 // Style for Filters Section ..................................//
 
-
-.filter-section { 
+.filter-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $bg-color;
   padding: 50px 0;
-  
+
   .filter__text {
-    text-align: center; 
+    text-align: center;
     margin-bottom: 25px;
 
     .filter-title__title {
       margin: 0 0 15px 0;
       .h1 {
-        font-family: 'Roboto',sans-serif;
+        font-family: "Roboto", sans-serif;
         font-weight: bold;
       }
     }
@@ -40,10 +31,10 @@
       padding: 0 15px;
     }
   }
-  
+
   &__btn-function {
     text-align: center;
-      @extend .btn-function;
+    @extend .btn-function;
   }
 }
 
@@ -58,7 +49,6 @@
 
 // Style for Navigation ............................................//
 
-
 .nav-section {
   display: flex;
   flex-direction: column;
@@ -67,7 +57,7 @@
   &__title {
     margin-bottom: 0;
   }
-  
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -76,13 +66,13 @@
     padding: 0;
     gap: 15px;
   }
-    &__list a {
-      text-decoration: none;
-      color: $black;
-      font-weight: bold;
-      list-style: none;
-    }
-  
+  &__list a {
+    text-decoration: none;
+    color: $black;
+    font-weight: bold;
+    list-style: none;
+  }
+
   &__item {
     display: flex;
     align-items: center;
@@ -90,15 +80,14 @@
     padding: 25px;
     gap: 20px;
     background-color: $bg-color;
-    border-radius: 25px; 
-    margin-bottom: 10px; 
-    box-sizing: border-box; 
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15); 
-    counter-increment: item-counter; 
+    border-radius: 25px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    counter-increment: item-counter;
     position: relative;
     z-index: 1;
 
-  
     &::before {
       content: counter(item-counter);
       position: relative;
@@ -114,12 +103,12 @@
       align-items: center;
       margin-right: 10px;
       margin-left: -35px;
-    } 
+    }
   }
 }
 
 @media (min-width: $breakpoint-1) and (max-width: $breakpoint-2) {
-  .nav-section{
+  .nav-section {
     display: flex;
     padding: 50px 140px;
 
@@ -136,12 +125,7 @@
   }
 }
 
-
-
-
-
 // Style for Cards Section ........................................//
-
 
 .cards-section {
   background-color: $bg-color;
@@ -151,13 +135,11 @@
     h2 {
       margin-bottom: 20px;
     }
-    
   }
 
   &__cards {
     @extend .card;
-  } 
-
+  }
 }
 
 @media (min-width: $breakpoint-1) and (max-width: $breakpoint-2) {
@@ -172,7 +154,4 @@
     grid-template-rows: 1fr 1fr;
     grid-gap: 50px 100px;
   }
-
 }
-
-

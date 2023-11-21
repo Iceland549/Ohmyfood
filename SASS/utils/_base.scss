@@ -1,7 +1,6 @@
-
 * {
-    font-family: 'Roboto', sans-serif;
-  }
+  font-family: "Roboto", sans-serif;
+}
 
 body {
   font-size: 16px;
@@ -15,14 +14,13 @@ p {
   margin: 0;
 }
 
-.fa-store { 
+.fa-store {
   color: $primary-color;
 }
 
 .fa-solid.fa-arrow-left {
   font-size: 25px;
   color: $black;
-
 }
 
 .fa-regular.fa-heart {
@@ -32,11 +30,10 @@ p {
 
 .fa-solid.fa-heart {
   font-size: 25px;
-  
-  
+
   /* Crée le dégradé */
   background-image: $btn-gradient-1;
-  background-size: 100%; 
+  background-size: 100%;
 
   /* Utilise l'icône comme masque pour le dégradé */
   -webkit-background-clip: text;
@@ -48,4 +45,3 @@ p {
 .fa-regular.fa-circle-check {
   font-size: 25px;
 }
-

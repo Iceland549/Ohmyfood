@@ -1,39 +1,37 @@
+// Style HEADER ........................................//
+.header {
+  display: flex;
 
-
-.header { 
+  &__container {
     display: flex;
-    
-    &__container {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        align-items: center;
-    }
-    
-    &__logo {
-        background-color: $white;
-        justify-content: center;
-        padding: 10px 0;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+  }
 
-        img {
-            width: 162px;
-            height: 30px;
-        }
-    }
+  &__logo {
+    background-color: $white;
+    justify-content: center;
+    padding: 10px 0;
 
-    &__location {
-        display: flex;
-        flex-direction: row;
-        background-color: $grey-2;
-        gap: 10px;
-        width: 100%;
-        justify-content: center;  
-        padding: 15px 0 15px 0;
-        
-        &__icon {
-            width: 12px;
-            height: 16px;
-        }
+    img {
+      width: 162px;
+      height: 30px;
     }
+  }
+
+  &__location {
+    display: flex;
+    flex-direction: row;
+    background-color: $grey-2;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    padding: 15px 0 15px 0;
+
+    &__icon {
+      width: 12px;
+      height: 16px;
+    }
+  }
 }
-  

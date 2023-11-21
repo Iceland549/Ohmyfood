@@ -16,15 +16,12 @@
     justify-content: center;
     position: relative;
   }
-  
 
   &__icon {
     display: flex;
     position: absolute;
     left: 17px;
   }
-  
-
 }
 
 @media (min-width: $breakpoint-1) and (max-width: $breakpoint-2) {
@@ -56,7 +53,6 @@
 .block-entrees,
 .block-plats,
 .block-desserts {
-
   &:nth-child(even) {
     > .menu-block {
       @include fadeIn($transition-delay * 2);
@@ -69,7 +65,6 @@
     }
   }
 }
-
 
 //Style of Image..........................................//
 
@@ -89,8 +84,6 @@
 
 //..................................Style for Menu...............//
 
-
-
 .main-restaurant {
   display: flex;
   flex-direction: column;
@@ -108,19 +101,18 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    
+
     .card__icon {
       display: flex;
       margin-bottom: 25px;
     }
-    
+
     h1 {
       font-weight: unset;
       margin: 0px;
-      font-family: 'Shrikhand', sans-serif;
+      font-family: "Shrikhand", sans-serif;
     }
   }
-
 
   .block-title h2 {
     margin: 0px;
@@ -165,7 +157,6 @@
   }
 }
 
-
 // Style Checkbox .................//
 
 .main-restaurant {
@@ -173,10 +164,6 @@
     @extend .menu-block;
   }
 }
-
-
-    
-
 
 // Style @media query ..............................//
 
@@ -186,11 +173,11 @@
     position: relative;
     margin: -40px 190px 2px;
     padding: 0 200px 30px;
-    }
+  }
 
-    .block-title h2::after {
-      width: 4%;
-    }
+  .block-title h2::after {
+    width: 4%;
+  }
 
   .resto-image {
     z-index: 1;
@@ -200,7 +187,6 @@
   .restaurant__title {
     margin-inline: auto;
     padding-top: 30px;
-
   }
 
   .card__icon {

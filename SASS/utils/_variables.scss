@@ -1,17 +1,27 @@
-$primary-color: #9356DC;
-$second-color: #FF79DA;
-$third-color: #99E2D0;
+$primary-color: #9356dc;
+$second-color: #ff79da;
+$third-color: #99e2d0;
 $footer-color: #353535;
-$bg-color: #F6F6F6;
+$bg-color: #f6f6f6;
 $grey: #353535;
-$grey-2: #EAEAEA;
+$grey-2: #eaeaea;
 $white: #fff;
 $black: #000000;
-$btn-gradient-1: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-$btn-gradient-2: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+$btn-gradient-1: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  ),
+  linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
+$btn-gradient-2: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  ),
+  linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
 $green-2: #008766;
-$blue-1: #89C8FA;
-$blue-2: #003A68;
+$blue-1: #89c8fa;
+$blue-2: #003a68;
 
 $delay: 0.5s;
 $transition-duration: 1.5s;
@@ -19,4 +29,3 @@ $transition-delay: 1s;
 
 $breakpoint-1: 1024px;
 $breakpoint-2: 1440px;
-
