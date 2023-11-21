@@ -30,7 +30,6 @@ p {
 }
 
 .fa-solid.fa-heart {
-  display: inline-block;
   font-size: 25px;
   /* Crée le dégradé */
   background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -129,7 +128,7 @@ p {
   position: relative;
   transition: max-width 0.5s ease-in-out;
 }
-.menu-block__title:hover {
+.menu-block:hover .menu-block__title {
   max-width: 22ch;
 }
 .menu-block__subtitle {
@@ -139,7 +138,7 @@ p {
   position: relative;
   transition: max-width 0.5s ease-in-out;
 }
-.menu-block__subtitle:hover {
+.menu-block:hover .menu-block__subtitle {
   max-width: 25ch;
 }
 .menu-block__select-btn {
