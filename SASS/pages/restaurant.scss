@@ -50,21 +50,24 @@
   @include fadeIn(1s);
 }
 
-.block-entrees,
-.block-plats,
-.block-desserts {
-  &:nth-child(even) {
-    > .menu-block {
-      @include fadeIn($transition-delay * 2);
-    }
-  }
-
-  &:nth-child(odd) {
-    > .menu-block {
-      @include fadeIn($transition-delay * 3);
-    }
+.block-entrees {
+  > .menu-block {
+    @include fadeIn($transition-delay * 1); 
   }
 }
+
+.block-plats {
+  > .menu-block {
+    @include fadeIn($transition-delay * 2); 
+  }
+}
+
+.block-desserts {
+  > .menu-block {
+    @include fadeIn($transition-delay * 3); 
+  }
+}
+
 
 //Style of Image..........................................//
 
@@ -172,7 +175,7 @@
     z-index: 3;
     position: relative;
     margin: -40px 190px 2px;
-    padding: 0 200px 30px;
+    padding: 0 10% 30px;
   }
 
   .block-title h2::after {
