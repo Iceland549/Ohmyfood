@@ -38,7 +38,7 @@
   }
 }
 
-@media (min-width: $breakpoint-1) and (max-width: $breakpoint-2) {
+@media (min-width: $breakpoint-1) {
   .filter-section {
     display: flex;
     justify-content: center;
@@ -107,7 +107,7 @@
   }
 }
 
-@media (min-width: $breakpoint-1) and (max-width: $breakpoint-2) {
+@media (min-width: $breakpoint-1) {
   .nav-section {
     display: flex;
     padding: 50px 140px;
@@ -142,7 +142,7 @@
   }
 }
 
-@media (min-width: $breakpoint-1) and (max-width: $breakpoint-2) {
+@media (min-width: $breakpoint-1) {
   .cards-section {
     padding: 40px 140px;
   }

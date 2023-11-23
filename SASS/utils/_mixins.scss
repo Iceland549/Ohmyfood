@@ -23,7 +23,7 @@
   }
 }
 
-@media (min-width: $breakpoint-1) and (max-width: $breakpoint-2) {
+@media (min-width: $breakpoint-1) {
   .loader {
     height: 130vh;
   }
@@ -159,7 +159,7 @@
   }
 }
 
-@media (min-width: $breakpoint-1) and (max-width: $breakpoint-2) {
+@media (min-width: $breakpoint-1) {
   .menu-block__subtitle {
     text-overflow: unset;
     overflow: unset;
