@@ -120,7 +120,7 @@
 
   &__select-btn {
     opacity: 0;
-    transform: translateX(-80%);
+    transform: translateX(100%);
     transition: all 0.5s ease-in-out;
     position: absolute;
     border: none;
@@ -157,6 +157,15 @@
   &:hover .menu-block__price {
     transform: translateX(-65px);
   }
+
+  @media (max-width: 375px) {
+    .menu-block__title,
+    .menu-block__subtitle {
+      max-width: calc(100% - 20px); 
+      
+    }
+  }
+
 }
 
 @media (min-width: $breakpoint-1) {

@@ -4,8 +4,9 @@
 }
 
 body {
+  max-width: 1440px;
   font-size: 16px;
-  margin: 0;
+  margin: auto;
   padding: 0;
 }
 
@@ -67,7 +68,7 @@ p {
     visibility: hidden;
   }
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .loader {
     height: 130vh;
   }
@@ -143,7 +144,7 @@ p {
 }
 .menu-block__select-btn {
   opacity: 0;
-  transform: translateX(-80%);
+  transform: translateX(100%);
   transition: all 0.5s ease-in-out;
   position: absolute;
   border: none;
@@ -176,8 +177,14 @@ p {
 .menu-block:hover .menu-block__price {
   transform: translateX(-65px);
 }
+@media (max-width: 375px) {
+  .menu-block .menu-block__title,
+  .menu-block .menu-block__subtitle {
+    max-width: calc(100% - 20px);
+  }
+}
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .menu-block__subtitle {
     text-overflow: unset;
     overflow: unset;
@@ -308,7 +315,7 @@ p {
   padding: 0px;
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .footer {
     display: flex;
     justify-content: flex-end;
@@ -350,7 +357,7 @@ p {
   text-align: center;
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .filter-section {
     display: flex;
     justify-content: center;
@@ -412,7 +419,7 @@ p {
   margin-left: -35px;
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .nav-section {
     display: flex;
     padding: 50px 140px;
@@ -434,7 +441,7 @@ p {
 .cards-section .cards-section-title h2 {
   margin-bottom: 20px;
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .cards-section {
     padding: 40px 140px;
   }
